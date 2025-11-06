@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Cadastro | Estudo Vencedor</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Estudo Vencedor</h1>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="dicas.html">Dicas</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="auth-main container">
+        <div class="auth-box">
+            <div class="tabs">
+                <button id="tab-login" class="tab-btn active">Login</button>
+                <button id="tab-cadastro" class="tab-btn">Criar Conta</button>
+            </div>
+
+            <form id="form-login" class="form-auth active" action="/login" method="POST">
+                <button type="submit" class="btn-submit">Entrar</button>
+            </form>
+
+            <form id="form-cadastro" class="form-auth" action="/cadastro" method="POST" style="display: none;">
+                <button type="submit" class="btn-submit">Cadastrar e Começar</button>
+            </form>
+        </div>
+    </main>
+    
+    <script>
+        // JavaScript para alternar as abas
+        const tabLogin = document.getElementById('tab-login');
+        const tabCadastro = document.getElementById('tab-cadastro');
+        const formLogin = document.getElementById('form-login');
+        const formCadastro = document.getElementById('form-cadastro');
+
+        tabLogin.addEventListener('click', () => {
+            tabLogin.classList.add('active');
+            tabCadastro.classList.remove('active');
+            formLogin.style.display = 'block';
+            formCadastro.style.display = 'none';
+        });
+
+        tabCadastro.addEventListener('click', () => {
+            tabCadastro.classList.add('active');
+            tabLogin.classList.remove('active');
+            formCadastro.style.display = 'block';
+            formLogin.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

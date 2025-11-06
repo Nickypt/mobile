@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Meu Progresso | Estudo Vencedor</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header class="header">
+        </header>
+
+    <main class="dashboard-main container">
+        
+        <aside class="sidebar">
+            <div class="perfil">
+                <h2>Olá, Nome do Aluno!</h2>
+            </div>
+            <nav class="menu-dashboard">
+                <a href="#" class="active">Meu Progresso</a>
+                <a href="#dificuldades">Minhas Dificuldades</a>
+                <a href="#trilha">Trilha Sugerida</a>
+            </nav>
+        </aside>
+
+        <section class="conteudo-principal">
+            <div class="card-progresso">
+                <h3>📈 Visão Geral do Progresso</h3>
+                <div class="metricas">
+                    <div class="metrica"><h4>Acerto Médio Global</h4><p class="valor destaque-positivo">75%</p></div>
+                </div>
+            </div>
+
+            <div id="dificuldades" class="card-dificuldades">
+                <h3>🚨 Tópicos que Mais Exigem Atenção</h3>
+                <ul class="lista-dificuldades">
+                    <li class="item-dificuldade">
+                        <span>Física: Eletrodinâmica (Acerto: 40%)</span>
+                        <a href="conteudo/eletrodinamica.html" class="btn-revisar">Revisar Tópico</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    </body>
+</html>
